@@ -1,0 +1,125 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  /* Ensure it's above other content */
+}
+
+.header__logo {
+  width: 100px;
+  height: 20px;
+  object-fit: contain;
+  flex: 1;
+}
+
+.header__nav {
+  display: flex;
+  flex: 4;
+}
+
+.header__navLink {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: 0.2s;
+
+}
+
+.header__navLink:hover,
+.header__navLinkActive:hover {
+  transform: scale(1.1);
+}
+
+.header__navLinkActive {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  color: rgb(113, 113, 224);
+  transition: 0.2s;
+
+}
+
+
+.header__menu-icon {
+  display: none;
+  /* Hide menu icon by default */
+  cursor: pointer;
+}
+
+.header__dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #111;
+  padding: 10px;
+  z-index: 1000;
+}
+
+
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 576px) {
+  .header__menu-icon {
+    display: block;
+    /* Show menu icon on smaller screens */
+    color: white;
+  }
+
+  .header__logo {
+    width: 150px;
+    height: 35px;
+
+  }
+
+  .header__navLink {
+    font-size: 20px;
+  }
+
+  .header__nav {
+    display: none;
+    /* Hide navigation links */
+  }
+
+  .header__search {
+    display: none;
+    /* Hide search bar */
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 1024px) {
+  .header__menu-icon {
+    display: block;
+    /* Show menu icon on smaller screens */
+    color: white;
+  }
+
+  .header__logo {
+    width: 150px;
+    height: 35px;
+
+  }
+
+  .header__navLink {
+    font-size: 20px;
+  }
+
+
+  .header__nav {
+    display: none;
+    /* Hide navigation links */
+  }
+
+  .header__search {
+    display: none;
+    /* Hide search bar */
+  }
+}
